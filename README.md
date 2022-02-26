@@ -11,8 +11,14 @@
 
 
 
-**[20-02-27]** <br>
+**[20-02-26]** <br>
 
 - Spring Project 생성
 - DB 연결
-- Board Controller
+
+
+**[20-02-27]** <br>
+
+- Board Table 생성 (id, title, content)
+- 게시글 컨트롤러 생성 `controller/BoardController`
+- 게시글 작성 폼 생성 `templates/boardwrite.html`

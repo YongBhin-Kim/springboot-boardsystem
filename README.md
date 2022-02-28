@@ -30,3 +30,9 @@
 - Entity 생성 `entity/Board`
 - Service 생성 `service/BoardService`
 - Repository 생성 `repository/BoardRepository`
+
+**[오류]** <br>
+
+[20-02-28] : DB 연동이 오류이다.<br>
+null 오류 -> 해결 및 default 값 오류 -> 해결 및 작성 값 대신 default 값이 삽입 : wired가 안 되었나?
+

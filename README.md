@@ -33,6 +33,10 @@
 
 **[오류]** <br>
 
-[20-02-28] : DB 연동이 오류이다.<br>
+[20-02-28] : DB 연동 오류<br>
 null 오류 -> 해결 및 default 값 오류 -> 해결 및 작성 값 대신 default 값이 삽입 : wired가 안 되었나?
 
+[20-03-02] : DB 연동 오류<br>
+BoardController의 boardWritePro에서 `boardService.write(board)` 오류 <br>
+<=
+BoardService의 write에서 `boardRepository.save(board)` 오류

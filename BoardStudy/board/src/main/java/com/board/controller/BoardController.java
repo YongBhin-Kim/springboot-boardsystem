@@ -1,13 +1,19 @@
 package com.board.controller;
 
+import javax.swing.text.AbstractDocument.Content;
+
 import com.board.entity.Board;
 import com.board.service.BoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.thymeleaf.engine.AttributeName;
+
+import net.bytebuddy.agent.builder.AgentBuilder.Identified.Extendable;
 
 @Controller
 public class BoardController {
@@ -24,8 +30,32 @@ public class BoardController {
     @PostMapping("/board/writepro")
     public String boardWritePro(Board board) {
 
+        System.out.println("Controller 내부 1. " + boardService.getClass());
         boardService.write(board);
-        
+        System.out.println("Controller 내부 2. " + boardService.getClass());
         return "";
+    }
+
+    @GetMapping("/board/list")
+    public String boardList(Model model) {
+
+        model.addAttribute("list", boardService.boardList());
+
+        return "boardlist";
+    }
+
+    @GetMapping("/board/view") // localhost:8080/board/view?id=1
+    public String boardView(Model model, Integer id) {
+
+        model.addAttribute("board", boardService.boardView(id));
+        return "boardview";
+    }
+
+    @GetMapping("/board/delete")
+    public String boardDelete(Integer id) {
+
+        boardService.boardDelete(id);
+
+        return "redirect:/board/list";
     }
 }

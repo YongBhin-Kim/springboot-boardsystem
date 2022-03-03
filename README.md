@@ -38,15 +38,15 @@
 
 **[오류 : Lombok]** <br>
 
-[20-02-28] : DB 연동 오류<br>
+[20-02-28] <br>
 null 오류 -> 해결 및 default 값 오류 -> 해결 및 작성 값 대신 default 값이 삽입 : wired가 안 되었나?
 
-[20-03-02] : DB 연동 오류<br>
+[20-03-02] <br>
 BoardController의 boardWritePro에서 `boardService.write(board)` 오류 <br>
 <=
 BoardService의 write에서 `boardRepository.save(board)` 오류
 
-[20-03-03] : <br>
+[20-03-03] <br>
 1. localhost:8080/board/write 입력 : `Controller(/board/write)` <br>
 2. `boardwrite.html` 'name='title', 'name='content' <br>
 3. `Controller(/board/writepro)` <br>

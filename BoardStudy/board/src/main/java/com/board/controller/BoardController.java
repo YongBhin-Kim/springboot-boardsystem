@@ -3,6 +3,7 @@ package com.board.controller;
 import javax.swing.text.AbstractDocument.Content;
 
 import com.board.entity.Board;
+import com.board.repository.BoardRepository;
 import com.board.service.BoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +31,21 @@ public class BoardController {
     @PostMapping("/board/writepro")
     public String boardWritePro(Board board) {
 
-        System.out.println("Controller 내부 1. " + boardService.getClass());
+        // System.out.println("Controller 내부 1 제목 : " + board.getTitle()+ "\n");
+        // System.out.println("Controller 내부 1 내용 : " + board.getContent()+ "\n");
         boardService.write(board);
-        System.out.println("Controller 내부 2. " + boardService.getClass());
+        // System.out.println("Controller 내부 2 제목 : " + board.getTitle()+ "\n");
+        // System.out.println("Controller 내부 2 내용 : " + board.getContent()+ "\n");
         return "";
     }
+
+    // @PostMapping("/board/writepro")
+    // public String boardWritePro(String title, String content) {
+
+    //     System.out.println("제목 : " + title);
+    //     System.out.println("내용 : " + content);
+    //     return "";
+    // }
 
     @GetMapping("/board/list")
     public String boardList(Model model) {

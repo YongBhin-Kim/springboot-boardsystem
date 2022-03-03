@@ -18,9 +18,11 @@ public class BoardService {
     // 글 작성 처리
     public void write(Board board) {    
 
-        System.out.println("Service write 함수 내부 1. " + boardRepository.findAll());
+        // System.out.println("Service write 함수 내부 1 제목 : " + board.getTitle() + "\n");
+        // System.out.println("Service write 함수 내부 1 내용 : " + board.getTitle() + "\n");
         boardRepository.save(board);
-        System.out.println("Service write 함수 내부 2. " + boardRepository.findAll());
+        // System.out.println("Service write 함수 내부 2 제목 : " + board.getTitle() + "\n");
+        // System.out.println("Service write 함수 내부 2 내용 : " + board.getTitle() + "\n");
     }
 
     
@@ -30,7 +32,7 @@ public class BoardService {
         return boardRepository.findAll();
     }
 
-    // 특정 게시글 불러오기 
+    // 특정 게시글 불러오기
     public Board boardView(Integer id) {
 
         return boardRepository.findById(id).get();

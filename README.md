@@ -41,3 +41,21 @@ null 오류 -> 해결 및 default 값 오류 -> 해결 및 작성 값 대신 def
 BoardController의 boardWritePro에서 `boardService.write(board)` 오류 <br>
 <=
 BoardService의 write에서 `boardRepository.save(board)` 오류
+
+[20-03-03] : <br>
+1. localhost:8080/board/write 입력 : `Controller(/board/write)` <br>
+2. `boardwrite.html` 'name='title', 'name='content' <br>
+3. `Controller(/board/writepro)` <br>
+4. `boardService` : boardRepository.save(board) <br>
+5. `boardRepository` : DB로 넘기기 <br>
+
+default 값 설정 x : 2번이 안 되는 거 같다. <br>
+```
+2022-03-03 15:18:42.321 DEBUG 10271 --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        board
+        (content, title) 
+    values
+        (?, ?)
+```

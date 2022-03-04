@@ -33,6 +33,25 @@
 - Repository 생성 `repository/BoardRepository`
 <br>
 
+**[20-03-01 ~ 20-03-04]** <br>
+
+- 게시글 작성 `/board/write`
+- 게시글 목록 `/board/list`
+- 게시글 상세 `/board/view?id={id}` : `/board/list`에서 제목 클릭
+- 게시글 삭제 `/board/delete?id={id}` : `/board/view`에서 "삭제" 클릭
+- 게시글 수정 `/board/modify/{id}` : `/board/view`에서 "수정" 클릭 후 수정
+- 게시글 갱신 `/board/update/{id}` : `/board/modify/{id}`에서 수정 후 "수정" 클릭 하여 적용 
+
+[URL에 Parameter을 넘기는 방식] <br>
+- QueryString : 게시글 상세, 게시글 삭제 <br>
+- Pathvariable : 게시글 수정, 게시글 갱신 <br>
+
+
+
+
+
+<br><br>
+
 <h3>[오류와 해결]</h3>
 <br>
 

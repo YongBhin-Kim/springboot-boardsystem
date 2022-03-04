@@ -31,19 +31,15 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(Board board) {
+    public String boardWritePro(Board board, Model model) {
 
         boardService.write(board);
-        return "";
-    }
 
-    // @PostMapping("/board/writepro")
-    // public String boardWritePro(String title, String content) {
+        model.addAttribute("message", "글 작성이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/board/list");
 
-    //     System.out.println("제목 : " + title);
-    //     System.out.println("내용 : " + content);
-    //     return "";
-    // }
+        return "message";
+    } 
 
     @GetMapping("/board/list")
     public String boardList(Model model) {
@@ -87,4 +83,5 @@ public class BoardController {
 
         return "redirect:/board/list";
     }
+
 }

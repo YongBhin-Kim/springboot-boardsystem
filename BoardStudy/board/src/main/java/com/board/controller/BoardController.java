@@ -73,7 +73,7 @@ public class BoardController {
     }
 
     @PostMapping("/board/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Board board) {
+    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model) {
 
         Board boardtmp = boardService.boardView(id);
         boardtmp.setTitle(board.getTitle());
@@ -81,7 +81,10 @@ public class BoardController {
 
         boardService.write(boardtmp);
 
-        return "redirect:/board/list";
+        model.addAttribute("message", "글 수정이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/board/list");
+
+        return "message";
     }
 
 }

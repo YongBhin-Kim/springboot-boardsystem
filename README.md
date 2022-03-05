@@ -11,19 +11,20 @@
 
 **[20-01-29 ~ 20-02-26]** <br>
 - Web Server Spring Demo 공부
+<br>
 
 **[20-02-26]** <br>
 
 - Spring Project 생성
 - DB 연결
-
+<br>
 
 **[20-02-27]** <br>
 
 - Board Table 생성 (id, title, content)
 - 게시글 컨트롤러 생성 `controller/BoardController`
 - 게시글 작성 폼 생성 `templates/boardwrite.html`
-
+<br>
 
 **[20-02-28]** <br>
 
@@ -45,9 +46,12 @@
 [URL에 Parameter을 넘기는 방식] <br>
 - QueryString : 게시글 상세, 게시글 삭제 <br>
 - Pathvariable : 게시글 수정, 게시글 갱신 <br>
+<br>
 
-
-
+**[20-03-05]** <br>
+- 게시글 작성 메시지 `/board/writepro` : `/board/write`에서 게시글 작성 시 작성 완료 메시지 띄우기 및 `/board/list`으로 URL 넘기기
+- 게시글 수정 메시지 `/board/update/{id}` : `/board/modify/{id}`에서 게시글 수정 시 수정 완료 메시지 띄우기 및 `/board/list`으로 URL 넘기기
+<br>
 
 
 <br><br>

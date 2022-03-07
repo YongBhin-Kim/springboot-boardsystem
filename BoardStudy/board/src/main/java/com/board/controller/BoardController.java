@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.ResponseBody;
 // import org.thymeleaf.engine.AttributeName;
+import org.springframework.web.multipart.MultipartFile;
 
 // import net.bytebuddy.agent.builder.AgentBuilder.Identified.Extendable;
 
@@ -31,9 +32,9 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(Board board, Model model) {
+    public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception {
 
-        boardService.write(board);
+        boardService.write(board, file);
 
         model.addAttribute("message", "글 작성이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
@@ -73,13 +74,13 @@ public class BoardController {
     }
 
     @PostMapping("/board/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model) {
+    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model, MultipartFile file) throws Exception {
 
         Board boardtmp = boardService.boardView(id);
         boardtmp.setTitle(board.getTitle());
         boardtmp.setContent(board.getContent());
 
-        boardService.write(boardtmp);
+        boardService.write(boardtmp, file);
 
         model.addAttribute("message", "글 수정이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");

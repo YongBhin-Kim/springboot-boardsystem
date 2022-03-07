@@ -1,5 +1,7 @@
 package com.board;
 
+import java.io.IOException;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 // import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -10,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // @EntityScan(basePackages = {"com.board.entity"}) // com.my.jpa.entity 하위에 있는 @Entity 클래스 scan
 public class BoardApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		SpringApplication.run(BoardApplication.class, args);
 	}
 

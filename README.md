@@ -28,7 +28,7 @@
 
 **[20-02-28]** <br>
 
-- 게시글 컨트롤러 수정 `controller/BoardController` (db와 연동되게끔 : controller - service - repository) [오류]
+- 게시글 컨트롤러 수정 `controller/BoardController` (db와 연동되게끔 : controller - service - repository)
 - Entity 생성 `entity/Board`
 - Service 생성 `service/BoardService`
 - Repository 생성 `repository/BoardRepository`
@@ -52,6 +52,17 @@
 - 게시글 작성 메시지 `/board/writepro` : `/board/write`에서 게시글 작성 시 작성 완료 메시지 띄우기 및 `/board/list`으로 URL 넘기기
 - 게시글 수정 메시지 `/board/update/{id}` : `/board/modify/{id}`에서 게시글 수정 시 수정 완료 메시지 띄우기 및 `/board/list`으로 URL 넘기기
 <br>
+
+**[20-03-06]** <br>
+- 게시글 목록 `/board/list` 스타일 변경
+- (파일 업로드 예정)
+<br>
+
+**[20-03-07]** <br>
+- 
+
+
+
 
 
 <br><br>

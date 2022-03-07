@@ -1,12 +1,14 @@
 package com.board.service;
 
+import java.io.File;
 import java.util.List;
-
+import java.util.UUID;
 
 import com.board.entity.Board;
 import com.board.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 // @Transactional
 @Service
@@ -16,13 +18,20 @@ public class BoardService {
     private BoardRepository boardRepository;
 
     // 글 작성 처리
-    public void write(Board board) {    
+    public void write(Board board, MultipartFile file) throws Exception {    
 
-        // System.out.println("Service write 함수 내부 1 제목 : " + board.getTitle() + "\n");
-        // System.out.println("Service write 함수 내부 1 내용 : " + board.getTitle() + "\n");
+        String projectPath = System.getProperty("user.dir") + "/board/src/main/resources/static/files";
+
+        UUID uuid = UUID.randomUUID();
+
+        String fileName = uuid + "_" + file.getOriginalFilename();
+
+        File saveFile = new File(projectPath, fileName);
+
+        file.transferTo(saveFile);
+
         boardRepository.save(board);
-        // System.out.println("Service write 함수 내부 2 제목 : " + board.getTitle() + "\n");
-        // System.out.println("Service write 함수 내부 2 내용 : " + board.getTitle() + "\n");
+
     }
 
     

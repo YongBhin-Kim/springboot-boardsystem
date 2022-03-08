@@ -1,23 +1,26 @@
 package com.board.controller;
 
-// import javax.swing.text.AbstractDocument.Content;
+// import javax.swing.text.AbstractDocument.Content; ??
 
 import com.board.entity.Board;
-// import com.board.repository.BoardRepository;
+// import com.board.repository.BoardRepository; ??
 import com.board.service.BoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-// import org.springframework.web.bind.annotation.ResponseBody;
-// import org.thymeleaf.engine.AttributeName;
+// import org.springframework.web.bind.annotation.ResponseBody; // 
+// import org.thymeleaf.engine.AttributeName; // 
 import org.springframework.web.multipart.MultipartFile;
 
-// import net.bytebuddy.agent.builder.AgentBuilder.Identified.Extendable;
+// import net.bytebuddy.agent.builder.AgentBuilder.Identified.Extendable; //
 
 @Controller
 public class BoardController {
@@ -34,7 +37,7 @@ public class BoardController {
     @PostMapping("/board/writepro")
     public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception {
 
-        boardService.write(board, file);
+        boardService.boardWrite(board, file);
 
         model.addAttribute("message", "글 작성이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
@@ -43,9 +46,9 @@ public class BoardController {
     } 
 
     @GetMapping("/board/list")
-    public String boardList(Model model) {
+    public String boardList(Model model, @PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.DESC) Pageable pageable) {
 
-        model.addAttribute("list", boardService.boardList());
+        model.addAttribute("list", boardService.boardList(pageable));
 
         return "boardlist";
     }
@@ -74,17 +77,14 @@ public class BoardController {
     }
 
     @PostMapping("/board/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model, MultipartFile file) throws Exception {
+    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model) throws Exception {
 
-        System.out.println("여기가 확인부분 \n" + board.getFilename() + board.getFilepath())
+        System.out.println("여기가 확인부분 \n file : filename = \n" + board.getFilename() + "file : filepath " + board.getFilepath() + "\n");
         Board boardtmp = boardService.boardView(id);
         boardtmp.setTitle(board.getTitle());
         boardtmp.setContent(board.getContent());
 
-        // boardtmp.setFilename(board.getFilename());
-        // boardtmp.setFilepath(board.getFilepath());
-
-        boardService.write(boardtmp, file);
+        boardService.modifyWrite(boardtmp);
 
         model.addAttribute("message", "글 수정이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");

@@ -7,6 +7,8 @@ import java.util.UUID;
 import com.board.entity.Board;
 import com.board.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -34,11 +36,17 @@ public class BoardService {
 
     }
 
+    // 글 작성 처리
+    public void modifywrite(Board board) {    
+
+        boardRepository.save(board);
+
+    }
     
     // 게시글 리스트 처리
-    public List<Board> boardList() {
+    public Page<Board> boardList(Pageable pageable) {
 
-        return boardRepository.findAll();
+        return boardRepository.findAll(pageable);
     }
 
     // 특정 게시글 불러오기

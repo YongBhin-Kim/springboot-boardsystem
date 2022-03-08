@@ -69,16 +69,20 @@ public class BoardController {
     public String boardModify(@PathVariable("id") Integer id, Model model) {
 
         model.addAttribute("board", boardService.boardView(id));
-
+        System.out.println("boardmodify\n\n");
         return "boardmodify";
     }
 
     @PostMapping("/board/update/{id}")
     public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model, MultipartFile file) throws Exception {
 
+        System.out.println("여기가 확인부분 \n" + board.getFilename() + board.getFilepath())
         Board boardtmp = boardService.boardView(id);
         boardtmp.setTitle(board.getTitle());
         boardtmp.setContent(board.getContent());
+
+        // boardtmp.setFilename(board.getFilename());
+        // boardtmp.setFilepath(board.getFilepath());
 
         boardService.write(boardtmp, file);
 

@@ -20,7 +20,7 @@ public class BoardService {
     private BoardRepository boardRepository;
 
     // 글 작성 처리
-    public void write(Board board, MultipartFile file) throws Exception {    
+    public void boardWrite(Board board, MultipartFile file) throws Exception {    
 
         String projectPath = System.getProperty("user.dir") + "/board/src/main/resources/static/files";
 
@@ -37,7 +37,7 @@ public class BoardService {
     }
 
     // 글 작성 처리
-    public void modifywrite(Board board) {    
+    public void modifyWrite(Board board) {    
 
         boardRepository.save(board);
 

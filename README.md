@@ -75,6 +75,14 @@
 
 **[20-03-14]** <br>
 - 페이징 처리 기능 2 : URL 직접 입력 없이 list 아래에 페이지 번호 추가 <br>
+<br>
+
+**[20-03-15]** <br>
+- 게시글 검색 기능 구현 1 : `URL : localhost:8090/board/list?searchKeyword={searchKeyword}&page={page}` <br>
+- 게시글 검색 기능 구현 2 : `URL : localhost:8090/board/list` 에서 검색 버튼 추가 <br>
+<br>
+
+
 
 <br><br>
 

@@ -44,8 +44,8 @@
 - 게시글 갱신 `/board/update/{id}` : `/board/modify/{id}`에서 수정 후 "수정" 클릭 하여 적용 
 
 [URL에 Parameter을 넘기는 방식] <br>
-- QueryString : 게시글 상세, 게시글 삭제 <br>
-- Pathvariable : 게시글 수정, 게시글 갱신 <br>
+- QueryString : 게시글 상세(Integer id), 게시글 삭제(Integer id), 게시글 검색(String searchKeyword) <br>
+- Pathvariable : 게시글 수정(@PathVariable ("id")), 게시글 갱신 (@PathVariable ("id")) <br>
 <br>
 
 **[20-03-05]** <br>

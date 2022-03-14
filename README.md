@@ -68,11 +68,13 @@
 -> 우선 URL : `/board/modify` 에서는 파일 업로드 기능 없이 글 작성만 가능하게끔 구현 <br>
 (`BoardService/modifyWrite` 구현 : 파일 업로드 기능 x) <br>
 (`BoardController/boardUpdate` 에서 service 호출 : write -> modifyWrite) <br>
-- 페이징 처리 기능 1 : 1page당 10개의 게시물 표시 <br>
+- 페이징 처리 기능 1 : 1page당 10개의 게시물 표시 (URL : localhost:8080/board/list?page={page}) <br>
 (`BoardController/boardlist` : pageable 인터페이스 호출) <br>
 (`BoardService/boardList` : pageable 파라미터 삽입) <br>
+<br>
 
-
+**[20-03-14]** <br>
+- 페이징 처리 기능 2 : URL 직접 입력 없이 list 아래에 페이지 번호 추가 <br>
 
 <br><br>
 

@@ -1,5 +1,8 @@
 <h2>Spring Boot를 이용한 게시판 만들기</h2>
 
+**[Environment]** <br>
+- Mac OS
+- Visual Studio Code 2
 
 **[Use]** <br>
 
@@ -10,18 +13,19 @@
 <br><br><br>
 
 **[20-01-29 ~ 20-02-26]** <br>
-- Web Server Spring Demo 공부
+- Web-Server 구축을 위한 Spring 개념, 원리 공부
 <br>
 
 **[20-02-26]** <br>
 
 - Spring Project 생성
-- DB 연결
+- DB 연결 (MariaDB)
 <br>
 
 **[20-02-27]** <br>
 
-- Board Table 생성 (id, title, content)
+- Board Table 생성 (id, title, content) <br>
+(board Database, board table)
 - 게시글 컨트롤러 생성 `controller/BoardController`
 - 게시글 작성 폼 생성 `templates/boardwrite.html`
 <br>

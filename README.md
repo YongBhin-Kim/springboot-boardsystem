@@ -100,8 +100,7 @@ null 오류 -> 해결 및 default 값 오류 -> 해결 및 작성 값 대신 def
 
 [20-03-02] <br>
 BoardController의 boardWritePro에서 `boardService.write(board)` 오류 <br>
-<=
-BoardService의 write에서 `boardRepository.save(board)` 오류
+<= BoardService의 write에서 `boardRepository.save(board)` 오류
 
 [20-03-03] <br>
 1. localhost:8080/board/write 입력 : `Controller(/board/write)` <br>

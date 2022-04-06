@@ -1,16 +1,54 @@
 <h2>Spring Boot를 이용한 게시판 만들기</h2>
 
 **[Environment]**
+- Mac OS
+
 
 **[Use]**
-- Mac OS
 - Visual Studio Code 2
-- Spring Boot (Gradle)
-- MariaDB
+- Language : Java
+- Framework : Spring Boot(Gradle)
+- Database : MariaDB (Ver 15.1)
+- View template : Thymeleaf
 - MySQLWorkbench
-- JPA
+- Access DB : JPA
 <br><br><br>
 
+**[사전 설치]**
+- **Homebrew** <br>
+: Homebrew는 Mac OS에서 짧은 설치코드를 작성해 소프트웨어를 받을 수 있게 해주는 패키지 관리 시스템이다. <br>
+: mac 터미널에 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` 입력 <br>
+: `brew -v` 명령으로 Homebrew 버전을 확인할 수 있다. <br>
+<img width="663" alt="image" src="https://user-images.githubusercontent.com/98372474/161923892-fd2fdd06-5c74-44db-bfe9-8bff740d3058.png"> <br><br>
+
+
+- **MariaDB** <br>
+: 서로 관련 있는 데이터들의 집합을 데이터베이스라 하는데 , 데이터베이스 중 하나인 MariaDB를 설치한다. <br><br>
+: mac 터미널에 `brew install mariadb` 입력 <br><br>
+: `mariadb --version` 명령으로 mariadb의 버전을 확인할 수 있다. <br>
+<img width="810" alt="image" src="https://user-images.githubusercontent.com/98372474/161925850-8de9053a-af91-4fe5-936b-2070cfe23470.png"> <br><br>
+: `brew services list` 명령으로 실행중인 서비스를 확인할 수 있다. <br>
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/98372474/161926896-d31c1c26-be93-4447-aa8f-31528b841337.png"> <br><br>
+: mariadb 실행 명령어는 다음과 같다. `brew services start mariadb` <br>
+<img width="681" alt="image" src="https://user-images.githubusercontent.com/98372474/161927113-6b3524dc-0a5a-4c46-9230-6f6aa3d67c7e.png"> <br><br>
+: mariadb 종료 명령어는 다음과 같다. `brew services stop mariadb <br>
+<img width="647" alt="image" src="https://user-images.githubusercontent.com/98372474/161927630-198f8a7a-f6a7-47d0-81ec-bd8ee964f148.png"> <br><br>
+: mariadb의 터미널에서 사용법(TUI)은 터미널에 `mysql -p -uroot` 명령을 입력하면 되는데, mysqlworkbench로 사용할 것이므로 생략한다. <br>
+<img width="716" alt="image" src="https://user-images.githubusercontent.com/98372474/161928328-ee17e35c-4d5a-49ff-b716-011975a57f2c.png"> <br><br>
+
+- **MySQLWorkbench** <br>
+: mariadb를 터미널에서 TUI(Text-based user interface; 문자열 기반)환경으로 사용하는 대신에 GUI(graphical user interface; 그래픽 기반)환경으로 보기 쉽게 관리하기 위해 mariaDB의 GUI 툴인 MySQLWorkbench를 사용한다. <br>
+: 다운로드 링크 - https://dev.mysql.com/downloads/mysql/ <br>
+<img width="400" height="300" alt="image" src="https://user-images.githubusercontent.com/98372474/161930034-9efe37c7-df5b-4b24-a326-930d69dc15fa.png"> <br>
+: 본인의 버전에 맞게 다운로드 받으면 된다. <br>
+: 설치 중간 비밀번호 입력 란이 나오는데, root 사용자에서 사용할 비밀번호를 입력하면 된다. <br>
+
+
+
+
+
+**프로젝트 생성**
+**개발환경 세팅**
 
 **[20-01-29 ~ 20-02-26]** <br>
 - Web-Server 구축을 위한 Spring 개념, 원리 공부

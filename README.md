@@ -43,7 +43,9 @@
 - 생성 후(컨테이너 yb 생성) <br>
 <img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166119950-53a63921-a0f5-4485-8c95-c3e4aae2bebf.png"><br><br>
 
-**URL : `http://localhost:[포트번호]/board/write` 에서 글 작성과 파일 첨부가 가능하며, 확인은 및 삭제는 /board/list에서 가능합니다. **
+**URL : `http://localhost:[포트번호]/board/write` 에서 글 작성과 파일 첨부가 가능하며** <br>
+**확인은 및 삭제는 URL: `http://localhost:[포트번호]/board/list` 에서 가능합니다.**  <br>
+<br>
 
 
 <br><br>

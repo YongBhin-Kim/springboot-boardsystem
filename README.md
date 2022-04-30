@@ -33,11 +33,15 @@
 <br>
 
 - 터미널에 `docker create -p [포트번호]:[포트번호] --[컨테이너이름] [이미지이름]` 입력하여 컨테이너 생성 <br>
+- 생성과 동시에 실행 : 터미널에 `docker docker run -i -t --name [컨테이너이름] -p [포트번호]:[컨테이너포트번호] [이미지이름]` 입력
+
+<img width="500" height="50" alt="image" src="https://user-images.githubusercontent.com/98372474/166119980-98c71541-46ac-497a-9115-5889c3d4c191.png">
+<br>
 <img width="500" height="100" alt="image" src="https://user-images.githubusercontent.com/98372474/166119342-b66c7427-fff8-4587-af01-aa7e04c5e9a3.png">
 <br>
 
 - 생성 후(컨테이너 yb 생성) <br>
-<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166119353-bd79848f-dbd3-4b7b-a3cb-3f8f0701f603.png"><br>
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166119950-53a63921-a0f5-4485-8c95-c3e4aae2bebf.png"><br>
 
 
 

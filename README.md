@@ -1,8 +1,4 @@
-<h2>Spring Boot를 이용한 게시판 만들기</h2>
-
--------------------WebServer 시작--------------------------------------<br>
---------Docker 이미지로 시작하기 작성 (다른 repository에 작성예정)------<br>
-----------------------------------------------------------------------
+<h2>Spring Boot를 이용한 게시판 만들기(Docker image)</h2>
 
 
 
@@ -18,6 +14,7 @@
 - View template : Thymeleaf
 - MySQLWorkbench
 - Access DB : JPA
+- Docker image (아래설명)
 <br><br><br>
 
 **[사전 설치]**
@@ -66,9 +63,9 @@
 **[개발환경 세팅]**
 - a
 
--------------------WebServer 시작---------------------------------------<br>
-------------Docker 이미지로 시작하기 작성 (다른 repository에 작성예정)-----------<br>
-----------------------------------------------------------------------
+**[Docker image 다운로드]**
+- `https://hub.docker.com/r/coji68/web-server/tags`
+- `docker pull coji68/web-server:1.0` 명령으로 다운로드
 
 **[20-01-29 ~ 20-02-26]** <br>
 - Web-Server 구축을 위한 Spring 개념, 원리 공부

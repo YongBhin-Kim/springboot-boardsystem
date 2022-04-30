@@ -17,13 +17,31 @@
 - Docker image (아래설명)
 <br><br><br>
 
-
 **[Docker image 다운로드]**
 - 다운로드 링크 - https://hub.docker.com/r/coji68/web-server/tags <br>
 - 터미널에서 `docker pull coji68/web-server:1.0` 명령으로 이미지를 다운받는다.
 
-<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166118656-8ac0503b-f735-48a2-80ec-6020a725a1f1.png">
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166118656-8ac0503b-f735-48a2-80ec-6020a725a1f1.png"><br>
 - Docker Desktop에 다음과 같이 coji68/web-server 이미지가 다운로드 되었다.
+<br><br>
+
+
+**[Docker 컨테이너 만들기]**
+
+- 기존 사진 <br>
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166118867-1253ac8e-2c99-4c55-b0a9-763ed326fe9b.png">
+<br>
+
+- 터미널에 `docker create -p [포트번호]:[포트번호] [이미지이름]` 입력하여 컨테이너 생성 <br>
+<img width="500" height="100" alt="image" src="https://user-images.githubusercontent.com/98372474/166119002-780d2e62-de15-461e-a7ac-74574a11188a.png"> <br>
+
+- 생성 후 <br>
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166119100-c1807157-0851-4c8d-9874-5f4f1226b86d.png"> <br>
+
+
+
+
+<br><br>
 
 
 **[사전 설치]**

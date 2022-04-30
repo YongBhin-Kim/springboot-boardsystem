@@ -17,6 +17,12 @@
 - Docker image (아래설명)
 <br><br><br>
 
+
+**[Docker image 다운로드]**
+- 다운로드 링크 - https://hub.docker.com/r/coji68/web-server/tags <br>
+- `docker pull coji68/web-server:1.0` 명령으로 이미지를 다운받는다.
+
+
 **[사전 설치]**
 - **Homebrew** <br>
 : Homebrew는 Mac OS에서 짧은 설치코드를 작성해 소프트웨어를 받을 수 있게 해주는 패키지 관리 시스템이다. <br>
@@ -62,10 +68,6 @@
 
 **[개발환경 세팅]**
 - a
-
-**[Docker image 다운로드]**
-- `https://hub.docker.com/r/coji68/web-server/tags`
-- `docker pull coji68/web-server:1.0` 명령으로 다운로드
 
 **[20-01-29 ~ 20-02-26]** <br>
 - Web-Server 구축을 위한 Spring 개념, 원리 공부

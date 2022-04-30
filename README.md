@@ -20,7 +20,10 @@
 
 **[Docker image 다운로드]**
 - 다운로드 링크 - https://hub.docker.com/r/coji68/web-server/tags <br>
-- `docker pull coji68/web-server:1.0` 명령으로 이미지를 다운받는다.
+- 터미널에서 `docker pull coji68/web-server:1.0` 명령으로 이미지를 다운받는다.
+
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166118656-8ac0503b-f735-48a2-80ec-6020a725a1f1.png">
+- Docker Desktop에 다음과 같이 coji68/web-server 이미지가 다운로드 되었다.
 
 
 **[사전 설치]**

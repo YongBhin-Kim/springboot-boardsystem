@@ -45,7 +45,52 @@
 
 **URL : `http://localhost:[포트번호]/board/write` 에서 글 작성과 파일 첨부가 가능하며** <br>
 **확인은 및 삭제는 URL: `http://localhost:[포트번호]/board/list` 에서 가능합니다.**  <br>
+<br><br>
+
+========================0503추가===============<br>
+**[Spring Boot Docker image 실행하기]**
+
+
+
+**[Spring Boot Docker image 만들기]**
+```
+git clone https://github.com/spring-guides/gs-spring-boot-docker.git // spring image clone
+
+./gradlew build && java -jar build/libs/initial-0.0.1-SNAPSHOT.jar // SNAPSHOT check
+
+```
+<img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166336173-c5f9382b-d004-44e1-a95e-1427e35b16ff.png"> <br>
+
+```
+[.../gs-spring-boot-docker/initial/Dockerfile] // gradlew와 동등한 위치
+FROM openjdk:8-jdk-alpine // openjdk 사용
+ARG JAR_FILE=target/*.jar // SNAPSHOT 사용
+COPY ${JAR_FILE} app.jar 
+ENTRYPOINT ["java","-jar","/app.jar"]
+```
 <br>
+
+- Spring boot Docker Image 생성 명령어<br>
+`docker build --build-arg JAR_FILE=[jar파일 경로] -t [이미지이름] [Dockerfile위치](.은 현재디렉토리)` <br>
+<img width="800" height="20" alt="image" src="https://user-images.githubusercontent.com/98372474/166337129-e494bf25-8913-41b9-933a-c4f5ee2e5e62.png"> <br>
+
+- `docker images` 명령으로 생성된 이미지 확인 <br>
+<img width="800" height="20" alt="image" src="https://user-images.githubusercontent.com/98372474/166337688-b2a4e403-d952-4773-842b-ec4349bf4cfa.png"> <br>
+
+- Docker Image 실행 명령어 <br>
+`docker run -p [브라우저포트번호][컨테이너포트번호] -t [이미지이름]` <br><br>
+
+<img width="800" height="20" alt="image" src="https://user-images.githubusercontent.com/98372474/166337688-b2a4e403-d952-4773-842b-ec4349bf4cfa.png"> <br>
+
+
+
+- 명령어 실행 결과 Spring이 정상 작동<br>
+<img width="500" height="250" alt="image" src="https://user-images.githubusercontent.com/98372474/166337984-dd53531a-1544-418a-9091-6c83e8d8f386.png">
+
+- 브라우저를 통해 localhost로 접속한 결과 <br>
+<img width="500" height="250" alt="image" src="https://user-images.githubusercontent.com/98372474/166337952-26e86920-adf7-4ed7-9ce5-8c0130c6d516.png"><br><br>
+
+========================0503추가===============<br>
 
 
 <br><br>

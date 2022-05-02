@@ -240,6 +240,9 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 - 게시글 검색 기능 구현 2 : `URL : localhost:8090/board/list` 에서 검색 버튼 추가 <br>
 <br>
 
+**[22-05-03]** <br>
+- 간단한 Spring Boot Docker Image 생성, 받아온 후 실행 <br>
+<br>
 
 
 <br><br>

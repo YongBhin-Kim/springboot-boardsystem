@@ -1,38 +1,30 @@
 <h2>Spring Boot를 이용한 게시판 만들기(Docker image)</h2>
 
-
-
-**[Environment]**
-- Mac OS
-
-
-**[Use]**
-- Visual Studio Code 2
+**[Docker image Environment]**
+- Docker image
 - Language : Java
 - Framework : Spring Boot(Gradle)
-- Database : MariaDB (Ver 15.1)
-- View template : Thymeleaf
-- MySQLWorkbench
-- Access DB : JPA
-- Docker image (아래설명)
+- View template : Thymeleaf (추가예정)
+- Access DB : JPA (추가예정)
 <br><br><br>
 
 
 
-==========Spring Boot Docker Image 다운 및 실행 방법(22-05-03) =========<br>
+
+**==========Spring Boot Docker Image 다운 및 실행 방법(22-05-03, ver1.0) =========**<br>
 **[Spring Boot Docker image 실행하기]**
-1. Docker image 다운 : 터미널에 명령어 `docker pull coji68/web-server:1.0` 을 입력한다.(실험차 만든 간단한 이미지입니다.) <br>
-<img width="749" height="50" alt="image" src="https://user-images.githubusercontent.com/98372474/166339548-7a06b54f-304e-4016-8d87-5a3c66c9c7f9.png"> <br>
+1. Docker image 다운 
+- Docker image 링크 - https://hub.docker.com/r/coji68/web-server/tags <br>
+- 터미널에 명령어 `docker pull coji68/web-server:1.0` 을 입력한다.(실험차 만든 간단한 이미지입니다.) <br>
+<img width="800" height="30" alt="image" src="https://user-images.githubusercontent.com/98372474/166339548-7a06b54f-304e-4016-8d87-5a3c66c9c7f9.png"> <br>
 2. 다운받은 image 확인 명령어 : `docker images` <br>
-<img width="750" height="50" alt="image" src="https://user-images.githubusercontent.com/98372474/166339612-af0c191b-e070-455e-a3a2-55cbe5c2ce85.png"> <br>
+<img width="800" height="40" alt="image" src="https://user-images.githubusercontent.com/98372474/166339612-af0c191b-e070-455e-a3a2-55cbe5c2ce85.png"> <br>
 3. 다운받은 image를 컨테이너 생성과 동시에 실행 `docker run -p 8080:8080 coji68/web-server:1.0` <br>
-
-
 
 - Docker Image 실행 명령어 <br>
 `docker run -p [브라우저포트번호][컨테이너포트번호] -t [레포지이름/이미지이름:태그]` <br><br>
 
-<img width="800" height="20" alt="image" src="https://user-images.githubusercontent.com/98372474/166337688-b2a4e403-d952-4773-842b-ec4349bf4cfa.png"> <br>
+<img width="800" height="40" alt="image" src="https://user-images.githubusercontent.com/98372474/166337688-b2a4e403-d952-4773-842b-ec4349bf4cfa.png"> <br>
 
 
 
@@ -73,7 +65,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 - docker image 삭제 명령어 : `docker image rm [Image ID]` <br>
 
-==========Spring Boot Docker Image 다운 및 실행 방법(22-05-03) =========<br><br>
+**==========Spring Boot Docker Image 다운 및 실행 방법(22-05-03, ver1.0) =========**<br><br>
 
 
 
@@ -108,6 +100,24 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 **확인은 및 삭제는 URL: `http://localhost:[포트번호]/board/list` 에서 가능합니다.**  <br>
 
 <br><br>
+
+==============================<br>
+==============================<br>
+==============================<br>
+**[Environment]**
+- Mac OS
+
+
+**[Use]**
+- Visual Studio Code 2
+- Language : Java
+- Framework : Spring Boot(Gradle)
+- Database : MariaDB (Ver 15.1)
+- View template : Thymeleaf
+- MySQLWorkbench
+- Access DB : JPA
+- Docker image
+<br><br><br>
 
 
 **[사전 설치]**

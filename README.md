@@ -32,8 +32,8 @@
 <img width="400" height="280" alt="image" src="https://user-images.githubusercontent.com/98372474/166118867-1253ac8e-2c99-4c55-b0a9-763ed326fe9b.png">
 <br>
 
-- 터미널에 `docker create -p [포트번호]:[포트번호] --[컨테이너이름] [이미지이름]` 입력하여 컨테이너 생성 <br>
-- 생성과 동시에 실행 : 터미널에 `docker docker run -i -t --name [컨테이너이름] -p [포트번호]:[컨테이너포트번호] [이미지이름]` 입력
+- (생성과 동시에 실행) : 터미널에 `docker docker run -i -t --name [컨테이너이름] -p [포트번호]:[컨테이너포트번호] [이미지이름]` 입력 <br>
+- (생성만) : 터미널에 `docker create -p [포트번호]:[포트번호] --[컨테이너이름] [이미지이름]` 입력하여 컨테이너 생성 <br>
 
 <img width="500" height="50" alt="image" src="https://user-images.githubusercontent.com/98372474/166119980-98c71541-46ac-497a-9115-5889c3d4c191.png">
 <br>

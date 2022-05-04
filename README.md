@@ -1,7 +1,6 @@
-<h2>Ver.1.1 : Spring Boot Docker Image : 통신</h2>
-<h2>Ver 2.0 : Spring Boot Docker Image : 게시판</h2>
+<h2>스프링 부트를 이용한 게시판 만들기</h2>
 
-**스프링 부트 도커 이미지는 WebServer 레포지토리로 옮겼습니다.**
+**(스프링 부트 통신 도커 이미지 레포지토리는 WebServer 레포지토리로 옮겼습니다.)**
 
 **[Environment]**
 - Mac OS

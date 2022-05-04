@@ -1,4 +1,4 @@
-<h2>Spring Boot를 이용한 게시판 만들기(Docker image)</h2>
+<h2>Ver.1.0 : Spring Boot Docker Image 구축 </h2>
 
 **[Docker image Environment]**
 - Docker image
@@ -104,6 +104,11 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 ==============================<br>
 ==============================<br>
 ==============================<br>
+
+<h2>Ver.1.1 : Spring Boot Docker Image : 통신</h2>
+
+<h2>Ver 2.0 : Spring Boot Docker Image : 게시판</h2>
+
 **[Environment]**
 - Mac OS
 
